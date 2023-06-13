@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cart-items-box {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 30%;
+            background-color: white;
+            padding: 0 20px;
+            border: 1px solid black;
+            z-index: 1111;
+        }
+
+        .cart-items-box .cart-box {
+            position: relative;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .cart-items-box .cart-box .fa-times {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            font-size: 18px;
+            cursor: pointer;
+            color: rgba(0, 0, 0, 0.7);
+            padding-left: 5px;
+        }
+
+        .cart-items-box .cart-box .fa-times:hover {
+            color: chocolate;
+        }
+
+        .cart-items-box .cart-box img {
+            height: 30px;
+        }
+
+        .cart-items-box .cart-box h3 {
+            font-size: 16px;
+            color: rgba(0, 0, 0, 0.7);
+            padding-bottom: 10px;
+        }
+
+        .cart-items-box .cart-box .price {
+            font-size: 16px;
+            color: chocolate;
+            padding-bottom: 10px;
+        }
+
+        .cart-items-box .btn {
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cart-items-box" id="root">
+        <div id="cart-item"></div>
+        <!-- <div class="cart-box">
+            <span class="fa-solid fa-times"></span>
+
+        </div>
+        <div class="cart-box">
+            <span class="fa-solid fa-times"></span>
+
+        </div>
+        <div class="cart-box">
+            <span class="fa-solid fa-times"></span>
+
+        </div>
+        <div class="cart-box"> -->
+        <!-- <span class="fa-solid fa-times"></span>
+            <img src="Images/product1.jpg" alt="" width="30px">
+            <div class="content">
+                <h3>cart Item 01</h3>
+                <div class="price">$15.99/-</div>
+            </div> -->
+        <!-- </div> -->
+        <!-- <a href="#" class="btn">Chechout Now</a> -->
+        <!-- </div> -->
+        <button onclick="objectEx()">Click</button>
+        <div id="test">
+
+        </div>
+        <script>
+            function objectEx() {
+                let data = [
+                    {
+                        image: "1.jpg",
+                        name: "Tata Salt",
+                        price: "Rs. 27"
+                    },
+                    {
+                        image: "2.jpg",
+                        name: "Tata",
+                        price: "Rs. 20"
+                    },
+                    {
+                        image: "3.jpg",
+                        name: "Daal",
+                        price: "Rs. 90"
+                    },
+                ];
+                // console.log(data);
+                // data.showData = () => {
+                //     let str = "";
+                //     for (let key in data) {
+                //         if (key == showData) {
+                //             continue;
+                //         }
+                //         str += `<img src='Images/${data[key]}' width='30px'>`;
+                //     }
+                //     document.getElementById("test").innerHTML = str;
+                // }
+                // let str = "";
+                // data.forEach((d, index) => {
+                //     str += `<img src='Images/${data.image}'/><h6>${data.name}</h6><p>${data.price}</p>`;
+                // })
+                // for (let key in data) {
+                //     console.log(data[key]);
+                //     str += `<img src='${data.image}/>'`;
+                // }
+                // document.getElementById("test").innerHTML = str;
+
+                
+            }
+        </script>
+</body>
+
+</html>

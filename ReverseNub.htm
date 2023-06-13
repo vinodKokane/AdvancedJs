@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="in1" />
+      <input type="submit" value="Submit" id="btn" />
+      <input type="button" value="Clear" id="btn2" onclick="clearBtn()" />
+      <h1 id="text"></h1>
+    </div>
+
+    <script>
+      // take button
+      let btn = document.getElementById("btn");
+      btn.addEventListener("click", function () {
+        // take the number from user
+        let num = document.getElementById("in1").value;
+        console.log(num + typeof num);
+        // covert that user input to Number
+        num = Number(num);
+        console.log(num + typeof num);
+
+        let r,
+          rev = 0;
+        while (num > 0) {
+          r = num % 10; //123%10 = 3
+          rev = rev * 10 + r; //(0*10+3)
+          num = Math.floor(num / 10);
+        }
+        // document.body.innerHTML =`<h2>${rev}</h2>`;
+        document.getElementById("text").innerHTML = rev;
+      });
+
+      function clearBtn() {
+        document.getElementById("in1").value = "";
+        document.getElementById("text").innerHTML = "";
+      }
+    </script>
+  </body>
+</html>

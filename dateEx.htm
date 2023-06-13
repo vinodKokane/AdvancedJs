@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.733);
+            color: white;
+            text-align: center;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            color: black;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            font-size: 20px;
+            position: relative;
+            top: 150px;
+            left: -40%;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="text"></h1>
+    <div class="t1"></div>
+    <div class="t2"></div>
+    <div class="t3"></div>
+    <script>
+        let Disp_text = document.getElementById("text");
+
+
+
+        function updateTime() {
+            let date1 = new Date();
+            Disp_text.innerHTML = date1;
+            let hr = document.querySelector(".t1");
+            hr.innerHTML = date1.getHours();
+            if (hr > 12) {
+                hr = hr - 12;
+            }
+            document.querySelector(".t2").innerHTML = date1.getMinutes();
+            document.querySelector(".t3").innerHTML = date1.getSeconds();
+
+        }
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+
+</html>

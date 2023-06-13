@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // global variable
+      var num = 20;
+      //local variable
+      function myFunction() {
+        let a = 10,
+          b = 20,
+          c;
+        c = a + b;
+        document.querySelector(".p").innerHTML = c;
+        let mult = (a + b) * num;
+        document.querySelector(".p2").innerHTML = mult;
+
+        paraEx(3, 4);
+      }
+
+      //   parameters function
+      function paraEx(i, j) {
+        let formula = i * i + 2 * i * j + j * j;
+        document.querySelector(".p3").innerHTML = formula;
+      }
+      //   alert(c); we can not access local variable outside the function
+    </script>
+  </head>
+  <body>
+    <button onclick="myFunction()">click</button>
+    <h2 class="p"></h2>
+    <h2 class="p2"></h2>
+    <h2 class="p3"></h2>
+  </body>
+</html>

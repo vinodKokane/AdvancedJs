@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Object Example Without for loop</title>
+  <script>
+    function objectEx() {
+      let Student =
+      {
+        image: "1.png",
+        name: "Vinod",
+        email: "vinodkokane111@gmail.com",
+        id: "1",
+      }
+      // aad data in Object
+      Student.mobile = "8208067186";
+      console.log(Student);
+      document.getElementById("img1").src = "Images/" + Student.image;
+      document.getElementById("p1").innerHTML = Student.name;
+      document.getElementById("p2").innerHTML = Student.email;
+      document.getElementById("p3").innerHTML = Student.id;
+
+    }
+  </script>
+</head>
+
+<body>
+  <img src="" alt="" id="img1">
+  <button onclick="objectEx()">Click</button>
+  <p id="p1"></p>
+  <p id="p2"></p>
+  <p id="p3"></p>
+</body>
+
+</html>

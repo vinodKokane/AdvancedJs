@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="print"></h1>
+
+    <script>
+        function fun1(a, b, callback) {
+            let c = a + b;
+            setTimeout(function () {
+                return callback(c);
+            }, 1000);
+        }
+        //callback or fun2 name doesn't matter
+        function fun2(value) {
+            document.getElementById("print").innerHTML = value;
+        }
+        fun1(20, 20, fun2);
+    </script>
+</body>
+
+</html>

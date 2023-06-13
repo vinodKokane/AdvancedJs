@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let person = [
+            {
+                name: "kush",
+                age: 12
+            },
+            {
+                name: "tej",
+                age: 10
+            },
+            {
+                name: "smit",
+                age: 18
+            },
+            {
+                name: "ram",
+                age: 12
+            },
+        ];
+
+        let person2 = [
+            {
+                name: "Smith",
+                age: 18
+            },
+            {
+                name: "Miko",
+                age: 21
+            },
+            {
+                name: "Jems",
+                age: 24
+            },
+            {
+                name: "Petter",
+                age: 17
+            },
+        ];
+
+        let total = 0;
+        
+        let arr = person.map((e, index) => {
+            total += e.age;
+            return e.name;
+        });
+        let arr2 = person2.filter((ele) => {
+            return ele.age > 18;
+        })
+        console.log(arr2)
+        console.log(arr);
+        console.log("No Of Employee = " + person.length)
+        console.log("total = " + total)
+
+
+    </script>
+</body>
+
+</html>
