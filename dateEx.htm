@@ -6,16 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            background:linear-gradient(to right bottom ,rgb(2, 2, 78),black);
+            width: 100vw;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: rgba(0, 0, 0, 0.733);
-            color: white;
-            text-align: center;
+            overflow: hidden;
         }
 
-        div {
+        .t1 {
+            animation: anim1 10s ease infinite;
+            transition: 2s all ease-in-out;
+            font-size: 40px;
+            font-weight: 700;
+            border: 1px solid white;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -24,34 +34,204 @@
             padding: 10px;
             border: none;
             border-radius: 20px;
-            font-size: 20px;
-            position: relative;
-            top: 150px;
-            left: -40%;
+            color: white;            
             width: 200px;
             height: 200px;
+        }
+
+        @keyframes anim1 {
+            0% {
+                background: linear-gradient(to left bottom, rgb(2, 2, 99), red);
+                box-shadow: inset 5px 5px 12px gray, 5px 5px 12px black;
+                color: #fff;
+            }
+
+            20% {
+                background: linear-gradient(to left bottom, rgba(0, 0, 0, 0.372), rgb(2, 2, 99));
+                box-shadow: inset 5px 5px 12px gray, 5px 5px 12px black;
+                color: white;
+            }
+
+            40% {
+                background: linear-gradient(to left bottom, rgb(4, 4, 242), rgb(0, 0, 0));
+                box-shadow: inset 5px 5px 12px gray, 5px 5px 12px black;
+                color: white;
+                transform: rotate(360deg);
+            }
+
+            60% {
+                background: linear-gradient(to left bottom, rgb(99, 55, 2), red);
+                box-shadow: inset 5px 5px 12px gray, 5px 5px 12px black;
+                color: white;
+
+            }
+
+            80% {
+                background: linear-gradient(to left bottom, rgb(2, 2, 99), red);
+                box-shadow: inset 5px 5px 12px gray, 5px 5px 12px black;
+                color: white;
+
+            }
+
+            100% {
+                background: linear-gradient(to left bottom, rgb(2, 2, 99), red);
+                box-shadow: inset 5px 5px 12px gray, 5px 5px 12px black;
+                color: white;
+
+            }
+        }
+
+        .t2 {
+            animation: anim2 10s ease infinite;
+            transition: 2s all ease-in-out;
+            font-size: 40px;
+            font-weight: 700;
+            border: 1px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+           
+            width: 200px;
+            height: 200px;
+        }
+
+        @keyframes anim2 {
+            0% {
+                background: linear-gradient(to left bottom, rgb(2, 2, 99), magenta);
+                box-shadow: inset 5px 5px 12px gray, 5px 5px 12px black;
+                color: #fff;
+                transform: rotate(0deg);
+
+            }
+
+            20% {
+                background: linear-gradient(to left bottom, rgba(0, 0, 0, 0.372), red);
+                box-shadow: inset 5px 5px 18px gray, 5px 5px 12px black;
+                color: white;
+                transform: rotate(-180deg);
+
+            }
+
+            40% {
+                background: linear-gradient(to left bottom, magenta, rgb(0, 0, 0));
+                box-shadow: inset 5px 5px 22px gray, 5px 5px 12px black;
+                color: white;
+                transform: rotate(-360deg);
+            }
+
+            60% {
+                background: linear-gradient(to left bottom, rgb(99, 55, 2), red);
+                box-shadow: inset 5px 5px 25px gray, 5px 5px 12px black;
+                color: white;
+                transform: rotate(180deg);
+
+
+            }
+
+            80% {
+                background: linear-gradient(to left bottom, rgb(2, 2, 99), magenta);
+                box-shadow: inset 5px 5px 30px gray, 5px 5px 12px black;
+                color: white;
+
+            }
+
+            100% {
+                background: linear-gradient(to left bottom, rgb(2, 2, 99), red);
+                box-shadow: inset 5px 5px 35px gray, 5px 5px 12px black;
+                color: white;
+
+            }
+        }
+
+        .t3 {
+            animation: anim3 20s ease infinite;
+            transition: 2s all ease-in-out;
+            font-size: 40px;
+            font-weight: 700;
+            border: 1px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            color: black;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            width: 200px;
+            height: 200px;
+
+        }
+
+        @keyframes anim3 {
+            0% {
+                background: linear-gradient(to left bottom, white, magenta);
+                box-shadow: inset 5px 5px 12px gray, 5px 5px 12px black;
+                color: #fff;
+                transform: rotate(180deg);
+
+            }
+
+            20% {
+                background: linear-gradient(to left bottom, rgba(0, 0, 0, 0.372), white);
+                box-shadow: inset 5px 5px 18px gray, 5px 5px 12px black;
+                color: white;
+                transform: rotate(0deg);
+
+            }
+
+            40% {
+                background: linear-gradient(to left bottom, White, rgb(0, 0, 0));
+                box-shadow: inset 5px 5px 22px gray, 5px 5px 12px black;
+                color: white;
+                transform: rotate(180deg);
+            }
+
+            60% {
+                background: linear-gradient(to left bottom, rgb(99, 55, 2), white);
+                box-shadow: inset 5px 5px 25px gray, 5px 5px 12px black;
+                color: white;
+                transform: rotate(270deg);
+
+
+            }
+
+            80% {
+                background: linear-gradient(to left bottom, White, magenta);
+                box-shadow: inset 5px 5px 30px gray, 5px 5px 12px black;
+                color: white;
+                transform: rotate(360deg);
+
+            }
+
+            100% {
+                background: linear-gradient(to left bottom, rgb(2, 2, 99), white);
+                box-shadow: inset 5px 5px 35px gray, 5px 5px 12px black;
+                color: white;
+                transform: rotate(0deg);
+
+            }
         }
     </style>
 </head>
 
 <body>
-    <h1 id="text"></h1>
-    <div class="t1"></div>
-    <div class="t2"></div>
-    <div class="t3"></div>
+    <div class="box">
+        <div class="t1"></div>
+        <div class="t2"></div>
+        <div class="t3"></div>
+    </div>
     <script>
-        let Disp_text = document.getElementById("text");
-
-
-
+        // let Disp_text = document.getElementById("text");
         function updateTime() {
             let date1 = new Date();
-            Disp_text.innerHTML = date1;
+            // Disp_text.innerHTML = date1;
             let hr = document.querySelector(".t1");
-            hr.innerHTML = date1.getHours();
-            if (hr > 12) {
-                hr = hr - 12;
-            }
+            let hour = date1.getHours() > 12 ? date1.getHours() - 12 : date1.getHours();
+
+            hr.innerHTML = hour;
             document.querySelector(".t2").innerHTML = date1.getMinutes();
             document.querySelector(".t3").innerHTML = date1.getSeconds();
 
